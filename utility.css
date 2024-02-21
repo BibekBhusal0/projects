@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn{
+    border: none;
+}
+a, a:visited{
+    text-decoration: none;
+    animation: all 0.5s;
+}
+a:hover{
+    font-weight: bold;
+
+}
+
+.btn_green{
+    color: white;
+    background-color: #5AC3B0;
+}
+.btn_red{
+    color:white;
+    background-color: #BD1E51;
+}
+.btn_small{
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+.btn_big{
+    padding: 16px 18px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+img{
+    width: 500px;
+}
