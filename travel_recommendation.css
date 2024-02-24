@@ -139,7 +139,27 @@ main .text{
 .search_parent>.icons{
     color: black;
 }
-
 button{
     cursor: pointer;
+}
+
+.result_item{
+    padding-bottom:2rem ;
+    margin: 2rem;
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.result_item img{
+    width: 100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.result_item .result_text{
+    margin: 0.5rem 1rem;
+
+}
+.result_item h3{
+    font-size: 2rem;
 }

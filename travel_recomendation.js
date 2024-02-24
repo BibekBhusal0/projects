@@ -5,9 +5,14 @@ const clear_btn = document.getElementById("clear_btn");
 
 function get_text(obj) {
   return `
-  <h4>${obj["name"]}</h4>
-  <img src="${obj["imageUrl"]}" alt="${obj["name"]}">
-  <p>${obj["description"]}</p>
+  <div class="result_item">
+    <img src="${obj["imageUrl"]}" alt="${obj["name"]}">
+    <h3 class='result_text'>${obj["name"]}</h3>
+    <p class='result_text'>${obj["description"]}</p>
+    <button class="btn btn_small btn_green result_text">Visit</button>
+    <br/>
+  </div>
+
   `;
 }
 
@@ -18,19 +23,16 @@ function update(keyword) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      for (let j in data) {
-        out += `<h2>${j}</h2>`;
-        if (j == "countries") {
-          for (let country of data[j]) {
-            out += `<h3>${country["name"]}</h3>`;
-            for (let city of country["cities"]) {
-              out += get_text(city);
-            }
+      console.log(data[keyword]);
+      if (keyword == "countries") {
+        for (let country of data[keyword]) {
+          for (let city of country["cities"]) {
+            out += get_text(city);
           }
-        } else {
-          for (let i of data[j]) {
-            out += get_text(i);
-          }
+        }
+      } else {
+        for (let i of data[keyword]) {
+          out += get_text(i);
         }
       }
       result.innerHTML = out;
@@ -51,9 +53,8 @@ function search() {
   }
 }
 
-search_btn.onclick = () => {
-  search();
-};
+search_btn.onclick = search;
+
 clear_btn.onclick = () => {
   result.innerHTML = "";
   search_text.value = "";
