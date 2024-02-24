@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Recommendation website</title>
+    <link rel="stylesheet" href="travel_recommendation.css" />
+    <link rel="stylesheet" href="../utility.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav_item"><div class="logo">Travel agency</div></div>
+      <div class="nav_item">
+        <div class="navlink">
+          <a href="travel_recommendation.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us </a>
+        </div>
+      </div>
+      <div class="nav_item"></div>
+    </nav>
+    <main class="home">
+      <div class="content" id="contact text">
+        <div class="contact_text">
+          <h1>CONTACT US</h1>
+          <p class="text">Our team will reply as soon as possible</p>
+        </div>
+      </div>
+      <div class="contact_inp">
+        <fieldset class="contact_field">
+          <label for="Name ">Name </label>
+          <input
+            type="text"
+            class="inp"
+            name="Name"
+            placeholder="Name"
+            id="Name" />
+          <label for="Email">Email</label>
+          <input
+            type="text"
+            class="inp"
+            name="Email"
+            placeholder="Email"
+            id="Email" />
+          <label for="Message">Message</label>
+          <textarea
+            placeholder="Message"
+            name="Message"
+            id="Message"
+            class="inp"
+            cols="30"
+            rows="10"></textarea>
+          <button class="btn btn_mid btn_blue">Submit</button>
+        </fieldset>
+      </div>
+    </main>
+    <script type="module" src="travel_recomendation.js"></script>
+  </body>
+</html>

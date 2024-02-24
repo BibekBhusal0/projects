@@ -6,6 +6,7 @@
 
 .btn{
     border: none;
+    text-align: center;
 }
 a, a:visited{
     text-decoration: none;
@@ -13,7 +14,6 @@ a, a:visited{
 }
 a:hover{
     font-weight: bold;
-
 }
 
 .btn_green{
@@ -24,9 +24,19 @@ a:hover{
     color:white;
     background-color: #BD1E51;
 }
+.btn_blue{
+    color: white;
+    background-color: #274385;
+}
+
 .btn_small{
     padding: 6px 8px;
     border-radius: 6px;
+    font-size: 1.1rem;
+}
+.btn_mid{
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.8rem;
     font-size: 1.1rem;
 }
 .btn_big{

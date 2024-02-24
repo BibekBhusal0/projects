@@ -1,8 +1,9 @@
 function get_data() {
   fetch("travel_recommendation.json")
-    .than((response) => response.json)
-    .than((data) => {
-      console.log(data);
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
     });
 }
+
 get_data();
