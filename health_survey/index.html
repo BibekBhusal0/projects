@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Health Data Analysis</title>
+    <link rel="stylesheet" href="../utility.css">
+    <link rel="stylesheet" href="healthcare.css">
+  </head>
+  <body>
+    <header>
+        <nav>
+            <div class='nav_heading'>
+                <h3> Health Analysis Census  <h3> 
+            </div>
+            <div class='nav_links'>
+                <navlink> <a href='index.html'>Home </a> </navlink>
+                <navlink> <a href='index.html'>Home </a> </navlink>
+                <input name='search_input' type='text' id='search_bar'  palceholder="Enter a health condition" >
+                <button  class='btn btn_red btn_small'    id='btn_search'>Search </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1> Health Data Analysis </h1>
+        <div id='survey_form'>
+            <div class='item'>
+                <label> Name </label>
+                <input  type ='text' name="name" id='name_input'>
+            </div>
+           
+            <div class='item'>
+                <label> Gender </label>
+                <input type ='radio' name="gender" value='Male'>
+                <label for='Male'> Male </label>
+                <input type ='radio' name="gender" value='Female' >
+                <label for='Male'> Female </label>
+            </div>
+           
+            <div class='item'>
+                <label for="age_input"> Age </label>
+                <input  type ='number' name="age" id='age_input' min='5' max='105'>
+            </div>
+           
+            <div class='item'>
+                <label for='condition'> Condition </label>
+                <select name='condition' id='condition'>
+                    <option value='' >Select condition </option>
+                    <option value='Diabetes' >Diabetes</option>
+                    <option value='Thyroid' >Thyroid</option>
+                    <option value='High Blood Pressure' >High Blood Pressure</option>
+                </select>
+            </div>
+            <button id='add_patient' class="btn btn_red btn_small" >Add Patient</button>
+
+        </div>
+        <div class="searchCondition">
+            <div id="result"></div>
+        </div>
+        <h2> Analysis Report </h2>
+        <div id="report"></div>
+    </main>
+	<script src="health_analysis.js"></script>
+  </body>
+</html>

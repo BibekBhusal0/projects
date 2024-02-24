@@ -1,66 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Health Data Analysis</title>
-    <link rel="stylesheet" href="utility.css">
-    <link rel="stylesheet" href="healthcare.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Recommendation website</title>
+    <link rel="stylesheet" href="travel_recommendation.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,200" />
   </head>
   <body>
-    <header>
-        <nav>
-            <div class='nav_heading'>
-                <h3> Health Analysis Census  <h3> 
-            </div>
-            <div class='nav_links'>
-                <navlink> <a href='index.html'>Home </a> </navlink>
-                <navlink> <a href='index.html'>Home </a> </navlink>
-                <input name='search_input' type='text' id='search_bar'  palceholder="Enter a health condition" >
-                <button  class='btn btn_red btn_small'    id='btn_search'>Search </button>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1> Health Data Analysis </h1>
-        <div id='survey_form'>
-            <div class='item'>
-                <label> Name </label>
-                <input  type ='text' name="name" id='name_input'>
-            </div>
-           
-            <div class='item'>
-                <label> Gender </label>
-                <input type ='radio' name="gender" value='Male'>
-                <label for='Male'> Male </label>
-                <input type ='radio' name="gender" value='Female' >
-                <label for='Male'> Female </label>
-            </div>
-           
-            <div class='item'>
-                <label for="age_input"> Age </label>
-                <input  type ='number' name="age" id='age_input' min='5' max='105'>
-            </div>
-           
-            <div class='item'>
-                <label for='condition'> Condition </label>
-                <select name='condition' id='condition'>
-                    <option value='' >Select condition </option>
-                    <option value='Diabetes' >Diabetes</option>
-                    <option value='Thyroid' >Thyroid</option>
-                    <option value='High Blood Pressure' >High Blood Pressure</option>
-                </select>
-            </div>
-            <button id='add_patient' class="btn btn_red btn_small" >Add Patient</button>
-
+    <nav>
+      <div class="nav_item"><div class="logo">Travel agency</div></div>
+      <div class="nav_item">
+        <div class="navlink">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us </a>
         </div>
-        <div class="searchCondition">
-            <div id="result"></div>
+      </div>
+      <div class="nav_item">
+        <div class="search_parent">
+          <input type="text" name="search" id="search" placeholder="Search" />
+          <span class="material-symbols-outlined icons">search</span>
+          <button id="search_btn" class="btn btn_small btn_green">
+            Search
+          </button>
+          <button id="clear_btn" class="btn btn_small btn_green">Clear</button>
         </div>
-        <h2> Analysis Report </h2>
-        <div id="report"></div>
+      </div>
+    </nav>
+    <main class="home">
+      <div class="content">
+        <h1>EXPLORE DREAM DESTINATION</h1>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus cum
+          veritatis dolorem molestias aperiam ipsa, molestiae consectetur minus
+          ratione aut explicabo voluptates dicta at ut quae non deserunt
+          voluptatibus laudantium.
+        </p>
+        <button class="btn btn_small btn_green">Book Now</button>
+      </div>
+      <div id="search_result" class="search_result"></div>
     </main>
-	<script src="health_analysis.js"></script>
+    <script type="module" src="travel_recomendation.js"></script>
   </body>
 </html>
